@@ -3,11 +3,11 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 
 from . import database
-from .models import RobotState
+#from .models import RobotState
 
 #if len(RobotState.objects.all()) != 1:
-RobotState.objects.all().delete()
-RobotState.objects.create(state='{}')
+#RobotState.objects.all().delete()
+#RobotState.objects.create(state='{}')
 
 def get_state(request):
     state = RobotState.objects.all()[0].state
